@@ -1,6 +1,7 @@
 %{
 	#include "compil.tab.h"
 	#include "tabStruct.h"
+	#include "tabInstruct.h"
 %}
 
 
@@ -29,8 +30,8 @@
 "else"	{ return tELSE;}
 "while"	{ return tWHILE;}
 [a-zA-Z]+[a-zA-Z0-9_]*		{ yylval.str = strdup(yytext);return tVAR;}
-[-]?[0-9]+([.][0-9]+)?		{ yylval.nb = atoi(yytext);return tDEC;}
-[-]?[0-9]+([.][0-9]+)?([e][-]?[1-9][0-9]*)			{yylval.nb = atoi(yytext);return tEXP;}
+[-]?[0-9]+([.][0-9]+)?		{yylval.nb = atoi(yytext);return tDEC;}
+[-]?[0-9]+([.][0-9]+)?([e][-]?[1-9][0-9]*)			{ yylval.nb = atoi(yytext);return tEXP;}
 ";"		{ return tEND;}
 ","		{ return tVIRG;}
 [ \t\n]	;

@@ -7,7 +7,7 @@ compil.tab.c : compil.y
 	~/bison/bin/bison -d -v compil.y
 
 compiler : lex.yy.c compil.tab.c
-	gcc -o compiler lex.yy.c compil.tab.c tabStruct.c libfl.a ~/bison/lib/liby.a
+	gcc -o compiler lex.yy.c compil.tab.c tabStruct.c tabInstruct.c libfl.a ~/bison/lib/liby.a
 
 clean : 
 	rm compil.tab.c

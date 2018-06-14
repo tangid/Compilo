@@ -493,8 +493,9 @@ char *yytext;
 #line 2 "compiler.l"
 	#include "compil.tab.h"
 	#include "tabStruct.h"
-#line 496 "lex.yy.c"
+	#include "tabInstruct.h"
 #line 497 "lex.yy.c"
+#line 498 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -711,10 +712,10 @@ YY_DECL
 		}
 
 	{
-#line 7 "compiler.l"
+#line 8 "compiler.l"
 
 
-#line 717 "lex.yy.c"
+#line 718 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -773,151 +774,151 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 9 "compiler.l"
+#line 10 "compiler.l"
 { return tMAIN;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 10 "compiler.l"
+#line 11 "compiler.l"
 { return tCONST;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 11 "compiler.l"
+#line 12 "compiler.l"
 { return tINT;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 12 "compiler.l"
+#line 13 "compiler.l"
 { return tEGAL_EGAL;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 13 "compiler.l"
+#line 14 "compiler.l"
 { return tSUP_EGAL;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 14 "compiler.l"
+#line 15 "compiler.l"
 { return tINF_EGAL;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 15 "compiler.l"
+#line 16 "compiler.l"
 { return tEGAL;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 16 "compiler.l"
+#line 17 "compiler.l"
 { return tNEGAL;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 17 "compiler.l"
+#line 18 "compiler.l"
 { return tSOUSTR;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 18 "compiler.l"
+#line 19 "compiler.l"
 { return tADD;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 19 "compiler.l"
+#line 20 "compiler.l"
 { return tMUL;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 20 "compiler.l"
+#line 21 "compiler.l"
 { return tDIV;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 21 "compiler.l"
+#line 22 "compiler.l"
 { return tPO;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 22 "compiler.l"
+#line 23 "compiler.l"
 { return tPF;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 23 "compiler.l"
+#line 24 "compiler.l"
 { return tAF;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 24 "compiler.l"
+#line 25 "compiler.l"
 { return tAO;}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 25 "compiler.l"
+#line 26 "compiler.l"
 { return tSUP;}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 26 "compiler.l"
+#line 27 "compiler.l"
 { return tINF;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 27 "compiler.l"
+#line 28 "compiler.l"
 { return tPRINT;}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 28 "compiler.l"
+#line 29 "compiler.l"
 { return tIF;}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 29 "compiler.l"
+#line 30 "compiler.l"
 { return tELSE;}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 30 "compiler.l"
+#line 31 "compiler.l"
 { return tWHILE;}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 31 "compiler.l"
+#line 32 "compiler.l"
 { yylval.str = strdup(yytext);return tVAR;}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 32 "compiler.l"
-{ yylval.nb = atoi(yytext);return tDEC;}
+#line 33 "compiler.l"
+{yylval.nb = atoi(yytext);return tDEC;}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 33 "compiler.l"
-{yylval.nb = atoi(yytext);return tEXP;}
+#line 34 "compiler.l"
+{ yylval.nb = atoi(yytext);return tEXP;}
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 34 "compiler.l"
+#line 35 "compiler.l"
 { return tEND;}
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 35 "compiler.l"
+#line 36 "compiler.l"
 { return tVIRG;}
 	YY_BREAK
 case 28:
 /* rule 28 can match eol */
 YY_RULE_SETUP
-#line 36 "compiler.l"
+#line 37 "compiler.l"
 ;
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 38 "compiler.l"
+#line 39 "compiler.l"
 ECHO;
 	YY_BREAK
-#line 920 "lex.yy.c"
+#line 921 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1922,7 +1923,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 38 "compiler.l"
+#line 39 "compiler.l"
 
 
 

@@ -1,5 +1,4 @@
-#ifndef __tabInstruct_H_
-#define __tabInstruct_H_
+
 typedef struct Instruct{
 	char op[256];
 	char a[256];
@@ -13,9 +12,10 @@ typedef struct InstructList{
 } InstructList;
 
 InstructList* make_ilist(void);
-void add_instruct(InstructList* instructl,char* symbol,int type,int init,int depth );
-Instruct* get_instruct(InstructList* instructl, int nth);
-int find_symbol(InstructList* instructl, char* symbol);
-void display_instruct(InstructList instructl);
+void add_Instruct(InstructList* instructl,char* op,char* a,char* b,char* c);
+//Instruct* get_instruct(InstructList* instructl, int nth);
+//int find_symbol(InstructList* instructl, char* symbol);
+void display_Instruct(InstructList instructl);
+void write_Instruct(InstructList instructl);
 /*void change_value(InstructList* instructl, int index, int val);*/
-#endif
+
